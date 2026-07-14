@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExchangePro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+   <div class="container">
+
+        <div class="logo-section">
+            <i class="fa-solid fa-chart-line"></i>
+            <h1>ExchangePro</h1>
+            <p>Live Currency Exchange Rates</p>
+        </div>
+
+        <div class="amount">
+            <input type="number" class="Eamt" placeholder="Enter Amount" min="1">
+        </div>
+
+        <div class="dropdown">
+
+            <div class="from">
+                <p>From</p>
+
+                <div class="SelectContainer">
+                    <img src="https://flagcdn.com/64x48/us.png">
+                    <select name="from"></select>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-arrow-right-arrow-left swap"></i>
+
+            <div class="to">
+                <p>To</p>
+
+                <div class="SelectContainer">
+                    <img src="https://flagcdn.com/64x48/in.png">
+                    <select name="to"></select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="msg">
+            Ready to Convert
+        </div>
+
+        <button class="Ex-btn">
+            Convert Currency
+        </button>
+
+        <div class="history">
+            <h3>Recent Conversions</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 ExchangePro | Built by Doodam Sai Prasanna</p>
+        <p>Real-time currency conversion using Exchange Rate API</p>
+    </footer>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
