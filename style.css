@@ -12,14 +12,11 @@ html, body{
 
 body{
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    position: relative;
-
+    position:relative;
     padding:40px 20px;
-
     background:#0b0b0b;
 
     background-image:
@@ -27,10 +24,16 @@ body{
     radial-gradient(circle at bottom right,#06b6d4 0%,transparent 30%);
 }
 
+.page-wrapper{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
 .container{
-    
     width:850px;
-    
     max-width:95%;
 
     padding:40px;
@@ -49,7 +52,6 @@ body{
 
     color:white;
 }
-
 
 .logo-section{
     text-align:center;
@@ -75,54 +77,35 @@ body{
 }
 
 .Eamt{
-
     width:100%;
-
     padding:15px;
-
     border-radius:15px;
-
     background:#181818;
-
     border:1px solid #333;
-
     color:white;
-
     font-size:18px;
-
     outline:none;
 }
 
 .Eamt:focus{
     border-color:#06b6d4;
-
     box-shadow:0 0 10px #06b6d4;
 }
 
 .dropdown{
     margin-top:30px;
-
     display:flex;
-
     justify-content:space-around;
-
     align-items:center;
 }
 
 .SelectContainer{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
     padding:10px;
-
     background:#181818;
-
     border-radius:15px;
-
     border:1px solid #333;
 }
 
@@ -144,13 +127,9 @@ option{
 }
 
 .swap{
-
     font-size:1.5rem;
-
     color:#06b6d4;
-
     cursor:pointer;
-
     transition:.4s;
 }
 
@@ -159,36 +138,22 @@ option{
 }
 
 .msg{
-
     margin-top:25px;
-
     text-align:center;
-
     font-size:1.2rem;
-
     font-weight:600;
-
     color:#06b6d4;
 }
 
 .Ex-btn{
-
     width:100%;
-
     margin-top:25px;
-
     padding:15px;
-
     border:none;
-
     border-radius:15px;
-
     cursor:pointer;
-
     font-size:18px;
-
     font-weight:600;
-
     color:white;
 
     background:
@@ -202,7 +167,6 @@ option{
 }
 
 .Ex-btn:hover{
-
     transform:translateY(-3px);
 
     box-shadow:
@@ -218,7 +182,7 @@ option{
     scrollbar-width:none;
     -ms-overflow-style:none;
 
-     mask-image: linear-gradient(
+    mask-image:linear-gradient(
         to bottom,
         black 90%,
         transparent 100%
@@ -229,6 +193,7 @@ option{
     width:0;
     height:0;
 }
+
 .history::-webkit-scrollbar-track{
     background:#111;
     border-radius:10px;
@@ -239,7 +204,6 @@ option{
     border-radius:10px;
 }
 
-
 .history h3{
     margin-bottom:10px;
 }
@@ -249,20 +213,13 @@ option{
 }
 
 #historyList li{
-
     background:#181818;
-
     padding:14px;
-
     margin-top:10px;
     word-break:break-word;
-
     border-radius:12px;
-
     color:#d1d5db;
-
     border-left:4px solid #06b6d4;
-
     transition:.3s;
 }
 
@@ -270,53 +227,135 @@ option{
     transform:translateX(5px);
 }
 
-@media(max-width:500px){
-
-.container{
-    width:95%;
-}
-
-.dropdown{
-    flex-direction:column;
-    gap:20px;
-}
-}
-
 .footer{
     text-align:center;
     margin-top:30px;
     padding-top:20px;
-
     border-top:1px solid rgba(255,255,255,0.1);
-
     color:#9ca3af;
-
     font-size:15px;
 }
 
 .footer p{
-    margin: 5px 0;
-
-    width:800px;
-
+    max-width:800px;
+    width:100%;
     text-align:center;
-
     color:#9ca3af;
-
     padding:2px;
-
     margin-bottom:20px;
 }
 
 
-.page-wrapper{
-    width:100%;
 
-    display:flex;
-    flex-direction:column;
+@media (max-width:768px){
 
-    align-items:center;
+    body{
+        padding:30px 15px;
+    }
 
-    gap:20px;
+    .container{
+        width:100%;
+        padding:25px;
+    }
+
+    .logo-section h1{
+        font-size:1.7rem;
+    }
+
+    .footer p{
+        width:100%;
+    }
 }
 
+
+
+@media (max-width:500px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    .container{
+        width:100%;
+        padding:20px 15px;
+        border-radius:18px;
+    }
+
+    .logo-section i{
+        font-size:2.2rem;
+    }
+
+    .logo-section h1{
+        font-size:1.4rem;
+    }
+
+    .logo-section p{
+        font-size:0.9rem;
+    }
+
+    .dropdown{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .SelectContainer{
+        width:100%;
+        justify-content:center;
+    }
+
+    .SelectContainer img{
+        width:40px;
+        height:28px;
+    }
+
+    .Eamt{
+        font-size:16px;
+        padding:12px;
+    }
+
+    .msg{
+        font-size:1rem;
+    }
+
+    .Ex-btn{
+        font-size:16px;
+        padding:12px;
+    }
+
+    .history{
+        max-height:200px;
+    }
+
+    .footer{
+        font-size:13px;
+    }
+
+    .footer p{
+        width:100%;
+        margin-bottom:10px;
+    }
+}
+
+@media (max-width:360px){
+
+    .logo-section h1{
+        font-size:1.2rem;
+    }
+
+    .SelectContainer{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    select{
+        font-size:14px;
+    }
+
+    .Ex-btn{
+        font-size:15px;
+    }
+
+    .msg{
+        font-size:0.9rem;
+    }
+}
